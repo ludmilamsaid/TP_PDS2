@@ -50,10 +50,10 @@ Compilador C++
 Sistema Operacional compatível com C++
 
 ## Instruções de instalação:
-Clone o repositório: ``
-Navegue até o diretório do projeto: cd TP-pds2
-compile o código-fonte: `g++ -o gerenciador-tarefas main.cpp`
-Execute o programa: `/.gerenciador-tarefas`
+- Clone o repositório: ``
+- Navegue até o diretório do projeto: cd TP-pds2
+- compile o código-fonte: `g++ -o gerenciador-tarefas main.cpp`
+- Execute o programa: `/.gerenciador-tarefas`
 
 ## Instruções de Uso:
 ## Principais Dificuldades:
