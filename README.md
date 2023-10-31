@@ -49,6 +49,15 @@ Classe Usuário()
 	excluirUsuário(): permite a exclusão
 	login(): permite que usuário faça login no sistema com o nome e a senha
 
+Classe Interface()
+- Atributos
+       Tarefas (vector<task>): tarefas associado ao usuário
+       Projetos (vector<Project>): projetos associados ao usuário
+       Usuario (vector<username>): dados associados ao usuário
+
+- Métodos
+       ExibirInfo(): exibe as informações dos projetos e tarefas associados ao usuário.
+   
 
 ## Pré-Requisitos:
 Compilador C++
