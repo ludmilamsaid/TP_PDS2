@@ -27,3 +27,7 @@ void Projeto::mostrarTarefas() const {
         std::cout << i + 1 << ". " << tarefas[i].getTitulo() << std::endl;
     }
 }
+
+std::string Projeto::getTitulo() const {
+    return titulo;
+}
