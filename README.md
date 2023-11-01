@@ -13,6 +13,8 @@ O presente projeto tem o objetivo de desenvolver um sistema que auxilie os usuá
 Sendo assim, o sistema Spock facilitará a vida de seus usuários permitindo que eles criem projetos, adicionem tarefas a esses projetos e mantenham o controle sobre o progresso de suas atividades de forma intuitiva e eficiente.
 
 ## Estrutura do Projeto:
+O projeto será organizado em várias classes, cada uma com suas responsabilidades específicas. Abaixo, descrevemos as principais classes e suas funcionalidades.
+
 ## Funcionalidades:
 - O sistema deve ser capaz de adicionar um novo usuário e permitir que ele consiga logar a partir do email e senha
 - O usuário pode criar um novo projeto e adicionar tarefas a serem feitas nesse projeto
