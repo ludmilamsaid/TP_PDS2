@@ -11,7 +11,7 @@ void Tarefa::editar(const std::string& novoTitulo, const std::string& novaDescri
 }
 
 void Tarefa::excluir() {
-    // Remover a tarefa do projeto (não implementado neste exemplo)
+   
 }
 
 std::string Tarefa::getTitulo() const {
