@@ -1,6 +1,11 @@
 # TP_PDS2
 # Sistema de Gerenciamento de Projetos - Spock
 
+## Integrantes do grupo:
+- Ana Clara Melado Morais do Nascimento
+- Ludmila Miguel Said Carvalho
+- Pedro Henrique de Souza Santos Simil
+
 ##  Apresentação do Projeto: 
 O presente projeto tem o objetivo de desenvolver um sistema que auxilie os usuários na criação, organização e gerenciamento de projetos e tarefas, com um funcionamento semelhante ao Trello/Notion. Um dos maiores desafios das pessoas nos últimos anos é a organização de todas as tarefas do seu dia a dia, seja atividades pessoais ou profissionais. Nesse sentido, o projeto foi criado como uma forma  de auxiliar estudantes, equipes de trabalho e qualquer indivíduo que deseja melhorar a produtividade e a organização de suas atividades.
 
@@ -76,3 +81,4 @@ Sistema Operacional compatível com C++
 4-Na página de tarefas, o usuário poderá, assim como projetos, excluir, criar ou editar uma tarefa.
 
 ## Principais Dificuldades:
+- À medida que o projeto avançou, podemos verificar que surgiram alguns desafios relacionados à implementação de recursos avançados que não tivemos muito contato, como por exemplo, a implementação de uma interface gráfica para que a interação do usuário com o nosso projeto, fosse da melhor maneira possível. E além disso, tivemos que pensar na melhor maneira de guarda as informações e dados importantes para que o nosso sistema funcione.
