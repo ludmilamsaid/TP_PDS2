@@ -11,7 +11,7 @@ Projeto::~Projeto() {
     }
 }
 
-// Adiciona uma atividade ao projeto
+
 void Projeto::adicionarAtividade(Atividade* atividade) {
     atividades.push_back(atividade);
 }
@@ -25,7 +25,7 @@ void Projeto::exibirDetalhes() const {
     }
 }
 
-// Método para excluir o projeto, imprime uma mensagem indicando que o projeto foi excluído
+
 void Projeto::excluir() {
     try {
         // Verifica se há atividades associadas ao projeto
