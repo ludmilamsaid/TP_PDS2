@@ -1,33 +1,51 @@
 #include "projeto.h"
 #include <iostream>
 
+// Construtor da classe Projeto que inicializa o título usando o construtor da classe base Atividade
+Projeto::Projeto(const std::string& titulo) : Atividade(titulo) {}
 
-Projeto::Projeto(const std::string& titulo) : titulo(titulo) {}
-
-void Projeto::criarTarefa(const std::string& titulo, const std::string& descricao, const std::string& data) {
-    Tarefa novaTarefa(titulo, descricao, data, this);
-    tarefas.push_back(novaTarefa);
-}
-
-void Projeto::editarTarefa(int indice, const std::string& titulo, const std::string& descricao, const std::string& data) {
-    if (indice >= 0 && indice < tarefas.size()) {
-        tarefas[indice].editar(titulo, descricao, data);
+// Destrutor da classe Projeto, libera a memória alocada para as atividades associadas ao projeto
+Projeto::~Projeto() {
+    for (auto& atividade : atividades) {
+        delete atividade;
     }
 }
 
-void Projeto::excluirTarefa(int indice) {
-    if (indice >= 0 && indice < tarefas.size()) {
-        tarefas.erase(tarefas.begin() + indice);
+// Adiciona uma atividade ao projeto
+void Projeto::adicionarAtividade(Atividade* atividade) {
+    atividades.push_back(atividade);
+}
+
+// Exibe os detalhes do projeto, incluindo seu título e as atividades associadas
+void Projeto::exibirDetalhes() const {
+    std::cout << "Projeto: " << getTitulo() << std::endl;
+    std::cout << "Atividades do Projeto:" << std::endl;
+    for (const auto& atividade : atividades) {
+        atividade->exibirDetalhes();
     }
 }
 
-void Projeto::mostrarTarefas() const {
-    std::cout << "Tarefas do Projeto '" << titulo << "':" << std::endl;
-    for (size_t i = 0; i < tarefas.size(); ++i) {
-        std::cout << i + 1 << ". " << tarefas[i].getTitulo() << std::endl;
-    }
-}
+// Método para excluir o projeto, imprime uma mensagem indicando que o projeto foi excluído
+void Projeto::excluir() {
+    try {
+        // Verifica se há atividades associadas ao projeto
+        if (atividades.empty()) {
+            throw std::logic_error("O projeto não pode ser excluído sem atividades associadas.");
+        }
 
-std::string Projeto::getTitulo() const {
-    return titulo;
+        // Libera memória alocada para as atividades
+        for (auto& atividade : atividades) {
+            delete atividade;
+        }
+
+        // Limpa o vetor de atividades
+        atividades.clear();
+
+        // Imprime mensagem de sucesso
+        std::cout << "Projeto '" << getTitulo() << "' excluído com sucesso!" << std::endl;
+
+    } catch (const std::exception& e) {
+        // Captura exceções e imprime mensagens de erro
+        std::cerr << "Erro ao excluir projeto: " << e.what() << std::endl;
+    }
 }
