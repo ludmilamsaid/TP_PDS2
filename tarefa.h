@@ -1,22 +1,27 @@
 #ifndef TAREFA_H
 #define TAREFA_H
 
-#include <string>
+#include "atividade.h"
 
-class Projeto;  // Declarando a classe Projeto para evitar dependências circulares
-
-class Tarefa {
+// Definição da classe Tarefa, que herda da classe base Atividade
+class Tarefa : public Atividade {
 public:
-    Tarefa(const std::string& titulo, const std::string& descricao, const std::string& data, Projeto* projeto);
-    void editar(const std::string& titulo, const std::string& descricao, const std::string& data);
-    void excluir();
-    std::string getTitulo() const;  // Método para acessar o título da tarefa
+    // Construtor da classe Tarefa 
+    Tarefa(const std::string& titulo);
+    Tarefa(const std::string& titulo, const std::string& descricao, const std::string& data);
+
+    // Destrutor virtual da classe Tarefa (override da classe base)
+    ~Tarefa() override;
+
+    // Método para exibir detalhes da tarefa (override da classe base)
+    void exibirDetalhes() const override;
+
+    // Método para editar os atributos da tarefa (título, descrição, data)
+    void editar(const std::string& novoTitulo, const std::string& novaDescricao, const std::string& novaData);
 
 private:
-    std::string titulo;
+    // Variáveis de membro privadas para armazenar descrição e data da tarefa
     std::string descricao;
     std::string data;
-    Projeto* projeto;  // Referência ao projeto ao qual a tarefa pertence
 };
-
 #endif
