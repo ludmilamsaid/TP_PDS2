@@ -23,7 +23,13 @@ int main() {
         std::cout << "5. Sair" << std::endl;
         int escolha;
         std::cin >> escolha;
+<<<<<<< Updated upstream
         // Executar ação com base na escolha do usuário
+=======
+
+        // Executar ação com base na escolha do usuário
+        try {
+>>>>>>> Stashed changes
             if (escolha == 1) {
                 // Criar um novo projeto
                 std::cout << "Digite o título do projeto: ";
@@ -48,6 +54,31 @@ int main() {
                 Tarefa* tarefa = new Tarefa(tituloT);
                 atividades.push_back(tarefa);
                 std::cout << "Tarefa criada com sucesso!" << std::endl;
+<<<<<<< Updated upstream
             }
     }
 }
+=======
+            } else if (escolha == 4) {
+                // Mostrar detalhes de todas as atividades disponíveis (projetos e tarefas)
+                std::cout << "Atividades disponíveis:" << std::endl;
+                for (size_t i = 0; i < atividades.size(); i++) {
+                    atividades[i]->exibirDetalhes();
+                }
+            } else if (escolha == 5) {
+                // Liberar memória alocada para as atividades e sair do loop
+                for (auto& atividade : atividades) {
+                    delete atividade;
+                }
+                break;
+            } else {
+                std::cerr << "Opção inválida. Tente novamente." << std::endl;
+            }
+        } catch (const std::exception& e) {
+            std::cerr << "Erro: " << e.what() << std::endl;
+        }
+    }
+
+    return 0;
+}
+>>>>>>> Stashed changes
