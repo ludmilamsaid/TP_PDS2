@@ -1,25 +1,28 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 
-using std::string;
+#include <string>
 
 class Usuario {
+public:
+    // Construtor que recebe um nome de usuário, um e-mail e uma senha como parâmetros
+    Usuario(const std::string& username, const std::string& email, const std::string& senha);
 
-    public:
+    // Destrutor virtual da classe Usuario
+    virtual ~Usuario();
 
-        Usuario(string username, string email, string senha);
-        
-        string getUsername() const;
-        string getEmail() const;
-        string getSenha() const;
+    // Métodos para obter informações sobre o usuário
+    std::string getUsername() const;
+    std::string getEmail() const;
+    std::string getSenha() const;
 
-        void exibeInfos() const;
+    // Método para exibir os detalhes do usuário, como nome de usuário e e-mail
+    void exibirDetalhes() const;
 
-    private:
-    string username;
-    string email;
-    string senha;
-
+private:
+    std::string username;  
+    std::string email;     
+    std::string senha;    
 };
 
 #endif
