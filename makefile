@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++11
-SRC_FILES = main.cpp projeto.cpp tarefa.cpp
+SRC_FILES = main.cpp projeto.cpp tarefa.cpp atividade.cpp usuario.cpp
 OUTPUT = main
 
 all: $(OUTPUT)
