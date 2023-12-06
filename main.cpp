@@ -1,22 +1,26 @@
 #include <iostream>
+#include <iostream>
 #include <vector>
+#include "usuario.h"
 #include "projeto.h"
-
-
-using namespace std;
-
+#include "tarefa.h"
 
 int main() {
-    vector<Projeto> projetos;
+    // Vector para armazenar atividades (projetos e tarefas)
+    std::vector<Atividade*> atividades;
 
+    Usuario usuario("user1", "user1@example.com", "password");
 
+    // Loop principal
     while (true) {
-        cout << "Selecione uma ação:" << endl;
-        cout << "1. Criar projeto" << endl;
-        cout << "2. Mostrar projetos" << endl;
-        cout << "3. Sair" << endl;
+        std::cout << "Selecione uma ação:" << std::endl;
+        std::cout << "1. Criar projeto" << std::endl;
+        std::cout << "2. Mostrar projetos" << std::endl;
+        std::cout << "3. Criar tarefas" << std::endl;
+        std::cout << "4. Mostrar tarefas" << std::endl;
+        std::cout << "5. Sair" << std::endl;
         int escolha;
-        cin >> escolha;
+        std::cin >> escolha;
 
 
         if (escolha == 1) {
